@@ -1,0 +1,12 @@
+Ahmed Chaudhry (solo project), CSC 171 Word Wrap project.
+
+My program initially imports the scanner, sets up the Word Wrap class. All of my code was written in the main method.
+After this, I set up a scanner object. Then, I created a variable called lineLength which would store the integer value for the characters to output per line. Another input is taken for the string upon which the program will be run and is stored in the variable called inputString. This is initialized into an empty string. inputString will store the entire string entered by the user. I then created a string variable called lineRead which will later store the data for individual lines using scnr.next().
+Using a while loop (which runs while true), this will read individual words from the entire text that the user inputs and re-write the variable lineRead by reading a single line of input at a time. The variable lineRead will add onto inputString. By the end of the loop, inputString will contain the entire string entered by the user. There is a selection in the while loop which breaks the loop if the value of an individual line in equal to “Stop.” or “stop.”.
+When the loop runs, it’s design leads to 1 empty whitespace to the start of the string. To counter this, I took the substring of inputString so that it dealt with this problem. Then I stored the length of the inputString to totalLength which would be helpful later.
+I removed whitespace from inputString using indexOf method. Every instance of a double whitespace will be removed with a single whitespace. This would remove excessive whitespace and the indexOf method will return -1, thus terminating the loop.
+Then, the length of inputString is stored into a variable called totalLength. A for loop will run with the variable 'i' controlling how many times the loop runs. ‘i’ is initially set to 0 and will increment by the lineLength variable each time the loop runs. This loop will terminate when the length of ‘I’ is greater than totalLength. Each time the for loop runs, it will output as many characters (from inputString) as the value of lineLength, using the substring function. I used selection to print the last few characters of the string onto a single line, thus this is the only line of inputString which could be printed with lesser characters than the lineLength.
+
+list of bugs:
+1)	There are word breaks and as a result, words are cut when printing.
+2)	Long words are not printed onto separate lines 
